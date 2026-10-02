@@ -27,6 +27,8 @@ def main():
         expected.add(relative.as_posix())
     actual = {p.relative_to(ROOT).as_posix() for name in ('patches', 'runtime') for p in (ROOT / name).rglob('*') if p.is_file()}
     assert actual == expected
+    executable = json.loads((ROOT / 'docs/executable-build.json').read_text(encoding='utf-8'))
+    assert hashlib.sha256((ROOT / 'CockspurKoreanPatcher.exe').read_bytes()).hexdigest() == executable['sha256']
     print('PASS: 25 BSDIFF40 deltas and 8 new localization assets; 33 payload hashes verified.')
 
 

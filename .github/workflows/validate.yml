@@ -12,3 +12,11 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - run: python tools/verify_package.py
+      - name: Check packaged desktop app initialization
+        shell: pwsh
+        run: |
+          $report = Join-Path $env:RUNNER_TEMP 'cockspur-ui.json'
+          $process = Start-Process -FilePath '.\CockspurKoreanPatcher.exe' -ArgumentList @('--smoke-ui', $report) -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw 'Desktop app initialization failed' }
+          $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
+          if (-not $result.tk_initialized -or $result.controls -ne 4) { throw 'Unexpected desktop app report' }

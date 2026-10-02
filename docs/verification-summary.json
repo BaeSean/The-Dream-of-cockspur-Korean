@@ -12,12 +12,15 @@
   "installer_roundtrip": "Install, Verify, Restore, Verify passed on isolated original-file fixture",
   "restored_original_files": 25,
   "removed_added_files": 8,
-  "unit_tests_passed": 6,
+  "unit_tests_passed": 12,
   "package_payload_validation": "33/33 passed",
   "secret_pattern_scan_findings": [],
   "game_installation_modified": false,
   "runtime_playtest_this_session": false,
   "github_upload": "See repository commit history and Actions for current remote status",
   "release_publication": "not requested; not performed",
-  "manual_copy_install_restore": "33/33 installed hashes passed; 25 originals backed up and restored; 8 additions removed in isolated fixture"
+  "manual_copy_install_restore": "33/33 installed hashes passed; 25 originals backed up and restored; 8 additions removed in isolated fixture",
+  "default_installation": "Desktop app: choose game folder, install or restore",
+  "desktop_executable_roundtrip": "33 files installed, verified, restored on isolated fixture",
+  "ui_verification": "Packaged Tk initialization and 4 controls passed in normal execution environment; no visual inspection"
 }
