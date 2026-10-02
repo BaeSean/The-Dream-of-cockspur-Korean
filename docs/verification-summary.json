@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-02",
+  "translation_validation": {
+    "total": 1918,
+    "errors": 0,
+    "warnings": 0,
+    "note": "Scene-location count uses existing build report, not a fresh scene-text extraction."
+  },
+  "original_manifest_payload_hashes": "33/33 passed",
+  "delta_roundtrip": "25/25 byte-identical",
+  "pure_python_reconstruction": "33/33 SHA-256 matched",
+  "installer_roundtrip": "Install, Verify, Restore, Verify passed on isolated original-file fixture",
+  "restored_original_files": 25,
+  "removed_added_files": 8,
+  "unit_tests_passed": 6,
+  "package_payload_validation": "33/33 passed",
+  "secret_pattern_scan_findings": [],
+  "game_installation_modified": false,
+  "runtime_playtest_this_session": false,
+  "github_upload": "See repository commit history and Actions for current remote status",
+  "release_publication": "not requested; not performed",
+  "manual_copy_install_restore": "33/33 installed hashes passed; 25 originals backed up and restored; 8 additions removed in isolated fixture"
+}

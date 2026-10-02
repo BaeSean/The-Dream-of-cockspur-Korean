@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "translated": {
+    "dialogue": 1484,
+    "string_ui": 225,
+    "image_ui": 9,
+    "diary": 30,
+    "scene_locations": 98,
+    "item_names": 72,
+    "total": 1918
+  },
+  "source_totals": {
+    "dialogue_nonempty": 1484,
+    "ui_extracted": 234
+  },
+  "errors": [],
+  "warnings": []
+}

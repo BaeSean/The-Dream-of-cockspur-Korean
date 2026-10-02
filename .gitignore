@@ -1,0 +1,6 @@
+.local-package/
+.work/
+__pycache__/
+*.pyc
+backups/
+install-state.json

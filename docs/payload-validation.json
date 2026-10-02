@@ -1,0 +1,206 @@
+{
+  "files": 33,
+  "delta_files": 25,
+  "new_localization_files": 8,
+  "full_game_files_included": false,
+  "entries": [
+    {
+      "path": "The Dream Of A Cockspur_Data/level10",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 368
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level11",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 466
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level12",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 522
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level5",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 347
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level6",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 219
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level7",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 565
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level8",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 683
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level9",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 454
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/Assembly-CSharp.dll",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 217098
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/bookPage_6.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 517844
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/bookPage_8.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 378958
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_2.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 53349
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_3.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 53889
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_4.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 77841
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_8.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 77320
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/secretPathUI_3.ko.png",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 210758
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageSubtitles.dll",
+      "input_hash_verified": false,
+      "output_hash_verified": true,
+      "payload_bytes": 20480
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/resources.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 6856804
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets10.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 4835
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets11.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 4202
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets12.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 6047
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets13.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 6283
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets14.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 3960
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets2.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 1476
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets3.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 433
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets5.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 5583
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets6.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 3577
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets7.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 7761
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets8.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 8030
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets9.assets",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 5667
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/StreamingAssets/aa/catalog.json",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 501
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/StreamingAssets/aa/StandaloneWindows64/localization-assets-english(en)_assets_all.bundle",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 1000496
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/StreamingAssets/aa/StandaloneWindows64/localization-string-tables-english(en)_assets_all.bundle",
+      "input_hash_verified": true,
+      "output_hash_verified": true,
+      "payload_bytes": 10925
+    }
+  ]
+}

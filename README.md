@@ -1,6 +1,6 @@
 # The Dream Of A Cockspur 한국어 패치
 
-게임 설정에서 **English**를 선택하면 한국어로 표시됩니다. 번역: **여우불**. 서초바탕 글꼴을 사용합니다.
+게임 설정에서 **English**를 선택하면 한국어로 표시됩니다. 서초바탕 글꼴을 사용합니다.
 
 기존 완성 번역을 원본 게임 파일이 필요하도록 차분 패치로 재구성한 저장소입니다. 게임 실행 파일, 원본 게임 데이터, 수정된 게임 자산 전체, 추출 원문 데이터베이스, 세이브와 개인 백업은 포함하지 않습니다. 게임을 별도로 소유해야 합니다.
 
@@ -51,6 +51,33 @@ python tools/prepare.py --game-dir "D:\Games\TheDreamOfACockspur"
 ```
 
 `.local-package` 안의 백업과 `install-state.json`은 복원에 필요하므로 삭제하거나 다른 컴퓨터에 공유하지 마십시오. 재구성된 폴더에는 전체 게임 자산이 있으므로 GitHub에도 올리지 마십시오. 스크립트 실행이 시스템 정책으로 차단되면 조직 정책을 우회하지 말고 허용된 실행 환경에서 진행하십시오.
+
+## 복사·붙여넣기로 수동 설치하는 방법
+
+위의 `python tools/prepare.py ...` 재구성 단계까지는 동일합니다. 공개 저장소에는 차분만 있으므로 내려받은 `patches` 폴더를 게임에 직접 붙여넣어서는 적용되지 않습니다.
+
+1. 게임을 종료하고 원본 상태에서 준비하십시오. 게임 폴더의 `The Dream Of A Cockspur_Data` 폴더 전체를 **게임 폴더 밖의 별도 백업 위치**로 복사하십시오. 이 백업에는 교체되는 원본 25개 파일이 모두 들어 있어야 합니다. 정확한 목록은 `manifest.json`에서 `original_sha256`이 있는 항목입니다. 이미 패치된 상태의 파일을 원본 백업으로 사용하지 마십시오.
+2. 재구성 결과인 `.local-package\files`를 여십시오. 그 안의 **`The Dream Of A Cockspur_Data` 폴더 하나만** 게임 실행 파일 `The Dream Of A Cockspur.exe`가 있는 게임 루트에 복사하고 기존 폴더와 합친 뒤 같은 이름의 파일을 덮어쓰십시오. `.local-package` 자체나 `Apply-Patch.ps1`, `manifest.json`, 백업·상태 파일은 게임 폴더에 복사하지 마십시오.
+3. 아래 확인 명령으로 33개 파일이 모두 `Korean patch installed`인지 확인한 뒤 게임 언어에서 **English**를 선택하십시오.
+
+```powershell
+& .\.local-package\Apply-Patch.ps1 -Mode Verify -GameRoot "D:\Games\TheDreamOfACockspur"
+```
+
+수동 설치는 설치기의 `install-state.json`을 만들지 않습니다. 따라서 **설치기의 Restore 명령으로 수동 설치를 복원할 수 없습니다.** 복원하려면 게임을 종료하고 위에서 보관한 원본 `The Dream Of A Cockspur_Data` 폴더를 게임 루트로 복사하여 덮어쓴 다음, 수동 패치가 추가한 아래 8개 파일을 삭제하십시오. 삭제 전 경로와 파일명이 일치하는지 확인하십시오. 아래 경로는 모두 게임 루트 기준입니다.
+
+```text
+The Dream Of A Cockspur_Data\Managed\KoreanImageSubtitles.dll
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_6.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_8.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_2.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_3.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_4.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_8.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\secretPathUI_3.ko.png
+```
+
+같은 Verify 명령을 다시 실행하여 모든 항목이 `Original - compatible`인지 확인하십시오. 별도 원본 백업을 준비하지 않았다면 수동 설치를 진행하지 마십시오.
 
 ## 저장소 구성
 
