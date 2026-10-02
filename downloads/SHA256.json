@@ -1,12 +1,12 @@
 {
   "Cockspur-Korean-QuickInstall.zip": {
-    "sha256": "ee8623e368dc8c4f03cb4b09bb507d9e6417243dfc667fe3ddc7710a4fed5f42",
-    "bytes": 18278583,
+    "sha256": "4c849b32e317e6a683967356dae1b84bb6337a9ff8f3ae4bbcef36d510457efa",
+    "bytes": 18278772,
     "entry_point": "CockspurKoreanPatcher.exe"
   },
   "Cockspur-Korean-CopyPaste.zip": {
-    "sha256": "a274010c77c2fc2e83538607dac7ee9c306a8641c6be891ae92588e8684b9da6",
-    "bytes": 18278821,
+    "sha256": "e453e3ce10fa3f68610712745287106f0b8807418fbad1520acdb903582ebb98",
+    "bytes": 18279010,
     "entry_point": "CockspurCopyFiles.exe"
   }
 }
