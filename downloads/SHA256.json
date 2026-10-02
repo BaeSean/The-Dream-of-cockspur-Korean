@@ -5,8 +5,10 @@
     "entry_point": "CockspurKoreanPatcher.exe"
   },
   "Cockspur-Korean-CopyPaste.zip": {
-    "sha256": "e453e3ce10fa3f68610712745287106f0b8807418fbad1520acdb903582ebb98",
-    "bytes": 18279010,
-    "entry_point": "CockspurCopyFiles.exe"
+    "sha256": "ea421b6ab7a35c3b7526bd2b5344f713243827bbb29c3a29acd04259430a2d6d",
+    "bytes": 16475510,
+    "entry_point": "The Dream Of A Cockspur_Data",
+    "installation": "copy-and-overwrite",
+    "game_files": 33
   }
 }
