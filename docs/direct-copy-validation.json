@@ -1,0 +1,113 @@
+{
+  "zip_sha256": "ea421b6ab7a35c3b7526bd2b5344f713243827bbb29c3a29acd04259430a2d6d",
+  "files_installed_by_copy": 33,
+  "patched_hashes_matched": 33,
+  "program_run_for_installation": false,
+  "unity_files_parsed": [
+    {
+      "file": "The Dream Of A Cockspur_Data/level10",
+      "objects": 2365
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level11",
+      "objects": 1454
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level12",
+      "objects": 3056
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level5",
+      "objects": 3311
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level6",
+      "objects": 2054
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level7",
+      "objects": 4197
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level8",
+      "objects": 3984
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/level9",
+      "objects": 4177
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/resources.assets",
+      "objects": 7460
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets10.assets",
+      "objects": 80
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets11.assets",
+      "objects": 81
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets12.assets",
+      "objects": 458
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets13.assets",
+      "objects": 578
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets14.assets",
+      "objects": 100
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets2.assets",
+      "objects": 16
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets3.assets",
+      "objects": 98
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets5.assets",
+      "objects": 328
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets6.assets",
+      "objects": 97
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets7.assets",
+      "objects": 323
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets8.assets",
+      "objects": 326
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/sharedassets9.assets",
+      "objects": 190
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/StreamingAssets/aa/StandaloneWindows64/localization-assets-english(en)_assets_all.bundle",
+      "objects": 19
+    },
+    {
+      "file": "The Dream Of A Cockspur_Data/StreamingAssets/aa/StandaloneWindows64/localization-string-tables-english(en)_assets_all.bundle",
+      "objects": 9
+    }
+  ],
+  "ui_translations_matched": 225,
+  "dialogue_translations_matched": 1484,
+  "korean_string_fields": 235,
+  "english_catalog_references_present": true,
+  "runtime_assembly_reference_present": true,
+  "korean_font_present": true,
+  "unrelated_file_unchanged": true,
+  "save_sentinel_unchanged": true,
+  "runtime_game_playtest": false,
+  "fixture_scope": "25 verified original patch-target files plus independent preservation sentinels; full runnable game installation unavailable",
+  "originals_restored": 25,
+  "added_files_absent_after_restore": 8,
+  "restore_method": "Rename patched Data folder, copy complete original Data backup; no automatic Restore"
+}

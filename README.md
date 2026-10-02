@@ -17,41 +17,22 @@
 
 ## 복사·붙여넣기로 설치하기
 
-이 방법도 **명령어 입력이나 Python 설치가 필요 없습니다.** 게임이 원본 상태일 때 진행합니다.
+**프로그램 실행이나 파일 생성 없이, 완성된 패치 파일을 붙여넣는 방식입니다.** 빠른설치 ZIP과 둘 다 설치할 필요는 없습니다.
 
-1. **최초 1회 원본 게임 기반으로 복사용 파일을 생성해야 합니다.** [복사용 ZIP](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/raw/refs/heads/main/downloads/Cockspur-Korean-CopyPaste.zip)을 받고 압축을 푼 뒤 **`CockspurCopyFiles.exe`**를 실행합니다. **게임 폴더 선택**으로 `The Dream Of A Cockspur.exe`가 있는 폴더를 고릅니다.
-2. **복사용 파일 만들기**를 누르고 **게임 폴더 밖의 저장 위치**를 고릅니다. 그곳에 `Cockspur-copy-files`가 생성됩니다. 원본 25개는 `original-files`에 자동 백업되며, 이 단계에서는 게임 파일이 바뀌지 않습니다.
-3. `Cockspur-copy-files\files` 안의 **`The Dream Of A Cockspur_Data` 폴더 하나만** 게임 실행 파일이 있는 폴더에 복사·붙여넣고, 같은 이름의 파일을 덮어씁니다. 게임 위치는 **스팀 라이브러리 → 게임 오른쪽 클릭 → 관리 → 로컬 파일 보기**로 찾습니다.
-4. 패처의 **상태 확인**을 눌러 정상 설치를 확인하고, 게임 언어를 **English**로 선택합니다.
+1. [복사·붙여넣기 ZIP 다운로드](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/raw/refs/heads/main/downloads/Cockspur-Korean-CopyPaste.zip) → 게임 밖의 폴더에 압축을 전부 풉니다.
+2. 게임을 종료하고 **Steam 라이브러리 → 게임 우클릭 → 관리 → 로컬 파일 보기**를 누릅니다.
+3. **덮어쓰기 전**, 원본 `The Dream Of A Cockspur_Data` 폴더 전체를 게임 밖에 복사해 백업합니다. ZIP에서 푼 **`The Dream Of A Cockspur_Data` 폴더 하나를 게임 실행 파일이 있는 폴더에 붙여넣고 덮어씁니다.** 기존 폴더에 병합해야 하며, 기존 폴더를 먼저 삭제하면 안 됩니다.
+4. 게임을 실행하고 언어를 **English**로 선택합니다.
 
-ZIP 전체나 `Cockspur-copy-files` 전체를 게임 폴더에 넣지 마십시오. **`files` 안의 게임 데이터 폴더만** 복사합니다. `original-files` 백업은 게임 폴더 밖에 보관하십시오. 생성된 복사용 폴더에는 원본 게임 파일이 있으므로 공개 업로드하거나 공유하지 마십시오.
+패처 실행·Python 설치·복사용 파일 생성은 필요 없습니다. ZIP에는 수정 25파일과 추가 8파일만 들어 있습니다. 게임 실행 파일, 미수정 게임 파일, 세이브, 원본 백업은 포함하지 않습니다. 수정된 Unity 컨테이너에는 번역 외 원래 게임 데이터도 함께 남아 있습니다. 다른 패치가 있다면 먼저 그 패치의 방법으로 원본을 복원하십시오. 게임 업데이트로 파일 구성이 달라진 버전에서는 사용하지 마십시오.
 
-### 복사 설치를 원래대로 되돌리기
+### 복사 설치를 원본으로 복원하기
 
 1. 게임을 종료합니다.
-2. `Cockspur-copy-files\original-files` 안의 **`The Dream Of A Cockspur_Data` 폴더**를 게임 실행 파일이 있는 폴더에 붙여넣고 덮어씁니다.
-3. 게임 폴더에서 아래 **추가 파일 8개만 삭제**합니다. 같은 목록이 `Cockspur-copy-files\added-files.txt`에도 있습니다.
-4. 패처의 **상태 확인**으로 원본 상태인지 확인합니다.
+2. 게임 안의 현재 `The Dream Of A Cockspur_Data` 폴더 이름을 `The Dream Of A Cockspur_Data-Korean-old`로 바꿉니다.
+3. 게임 밖에 백업했던 **원본 `The Dream Of A Cockspur_Data` 폴더 전체**를 게임 실행 파일이 있는 위치로 복사합니다. 정상 복원을 확인할 때까지 이름을 바꾼 폴더를 보관합니다.
 
-<details>
-<summary>복원할 때 삭제할 추가 파일 8개</summary>
-
-아래 경로는 게임 실행 파일이 있는 폴더 기준입니다. 원본 백업은 삭제하지 마십시오.
-
-```text
-The Dream Of A Cockspur_Data\Managed\KoreanImageSubtitles.dll
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_6.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_8.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_2.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_3.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_4.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_8.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\secretPathUI_3.ko.png
-```
-
-</details>
-
-**수동 복사 설치는 패처의 ‘원본으로 복원’ 버튼이나 PowerShell Restore 명령으로 복원하지 않습니다.** 위의 별도 원본 백업과 추가 파일 목록을 사용하십시오. 상태 확인 버튼은 두 설치 방식에서 모두 사용할 수 있습니다.
+백업을 기존 패치 폴더에 덮어쓰기만 하면 추가 파일이 남으므로 위 순서를 따르십시오. **이 수동 설치는 자동 패처의 Restore 버튼으로 복원되지 않습니다.** 원본 백업이 없는 경우 기존 파일을 보존한 뒤 Steam에서 원본을 다시 받는 방식이 필요합니다.
 
 ## 번역 범위
 
@@ -84,7 +65,7 @@ The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\secretPathUI_3.ko.png
 python tools/prepare.py --game-dir "D:\Games\TheDreamOfACockspur"
 ```
 
-이 Python 대안은 `.local-package\files`에 설치 파일을 만듭니다. GUI의 복사용 결과 경로는 위의 `Cockspur-copy-files\files`입니다. 게임 파일을 읽고 차분을 적용하여 로컬 파일을 재구성합니다. 게임 설치 폴더는 변경하지 않습니다. 33개 결과 파일의 SHA-256이 기존 검수 패치와 모두 같아야 완료됩니다.
+이 개발용 Python 대안은 `.local-package\files`에 설치 파일을 만듭니다. 일반 사용자의 복사 설치에는 위 CopyPaste ZIP을 사용하면 되며, 이 재구성 절차는 필요 없습니다. 게임 파일을 읽고 차분을 적용하여 로컬 파일을 재구성합니다. 게임 설치 폴더는 변경하지 않습니다. 33개 결과 파일의 SHA-256이 기존 검수 패치와 모두 같아야 완료됩니다.
 
 ## 고급 대안: PowerShell 설치·확인·복원
 
@@ -102,11 +83,14 @@ python tools/prepare.py --game-dir "D:\Games\TheDreamOfACockspur"
 & .\.local-package\Apply-Patch.ps1 -Mode Restore -GameRoot "D:\Games\TheDreamOfACockspur"
 ```
 
-`.local-package` 안의 백업과 `install-state.json`은 복원에 필요하므로 삭제하거나 다른 컴퓨터에 공유하지 마십시오. 재구성된 폴더에는 전체 게임 자산이 있으므로 GitHub에도 올리지 마십시오. 스크립트 실행이 시스템 정책으로 차단되면 조직 정책을 우회하지 말고 허용된 실행 환경에서 진행하십시오.
+`.local-package` 안의 백업과 `install-state.json`은 복원에 필요하므로 보관하고 공유하지 마십시오. 공개 CopyPaste ZIP은 검증된 수정·추가 33파일만 선별하며, 이 로컬 작업 폴더나 원본 백업을 통째로 포함하지 않습니다. 스크립트 실행이 시스템 정책으로 차단되면 조직 정책을 우회하지 말고 허용된 실행 환경에서 진행하십시오.
 
 </details>
 
 ## 저장소 구성
+
+- `downloads/Cockspur-Korean-CopyPaste.zip`: 완성된 수정·추가 33파일을 바로 붙여넣는 패키지
+- `copy-package-parts/`: CI에서 위 단일 ZIP을 조립하기 위한 저장소 내부 자료; 사용자는 받을 필요 없음
 
 - `patches/`: 기존 게임 파일 25개에 대한 BSDIFF40 차분
 - `CockspurKoreanPatcher.exe`: Python 설치 없이 사용하는 설치·확인·복원 프로그램

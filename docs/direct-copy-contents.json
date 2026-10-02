@@ -1,0 +1,206 @@
+{
+  "game_files": [
+    {
+      "path": "The Dream Of A Cockspur_Data/level10",
+      "bytes": 392416,
+      "sha256": "0ad485ea1749c25d20b6fa1b41f6790e7f18abfc077d7507027e303102281e6d",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level11",
+      "bytes": 231512,
+      "sha256": "f24dcdf6a10a6fc6a31615b93d32b021ea9d706e88c626b9d0fd39811f672372",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level12",
+      "bytes": 483056,
+      "sha256": "d1de0bc2175f349f886176ccf0439ce8f35373c6bbbe4358ded8b1a516b1fbf1",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level5",
+      "bytes": 518696,
+      "sha256": "3e1176bab21c8c33fbf0f3c2d20bd2f8abc197d73029fedd930387a2ebca468e",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level6",
+      "bytes": 326280,
+      "sha256": "fe8bed450136bbcd2f634062c01280d9d2f1ebc573efdf561ed77ceb08525736",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level7",
+      "bytes": 654952,
+      "sha256": "b1acf7b8ef51409f781a245cfde6598ead6c6f624bb94e456452de2d090bd0b5",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level8",
+      "bytes": 642976,
+      "sha256": "a659a1110a290605e1efabc5fae46958599ebbd0a13a031152a82f77c1df4784",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/level9",
+      "bytes": 646512,
+      "sha256": "831642c4304250d11b302561c55c5203b9a95e46d3415c9188f9852f21add18d",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/Assembly-CSharp.dll",
+      "bytes": 1070080,
+      "sha256": "bcff07fce78c1bad9c2b8d6ad2e0209a9d015a1621654e486709213511932bea",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/bookPage_6.ko.png",
+      "bytes": 517844,
+      "sha256": "4702c8394364b89926778e4a41276f94b2e95439d2c294104d9a774d6c6dc3fe",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/bookPage_8.ko.png",
+      "bytes": 378958,
+      "sha256": "0211f8e408204fb8bb23ac88047c55d36697c0b12b5d709b9081f13a707105cd",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_2.ko.png",
+      "bytes": 53349,
+      "sha256": "a576f968cb7886b4c378ed659167c0ff1f4ca94b81a0bfc9b2cb74df50c9d23f",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_3.ko.png",
+      "bytes": 53889,
+      "sha256": "cd7a8408cb97e473c7c8d55994d36d452123cbbbab8aaea53d6a00f5fdb07445",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_4.ko.png",
+      "bytes": 77841,
+      "sha256": "6e6bbc38389dd31a21036ed6b2ef43e30500a14d198503d33baca8de47e23566",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/Books_8.ko.png",
+      "bytes": 77320,
+      "sha256": "22ba8607e176e85803d910275f5e8e1e7e2906be7c2b084657d9829559ecaadb",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageAssets/secretPathUI_3.ko.png",
+      "bytes": 210758,
+      "sha256": "74f9c4c0cdd28b1216691c2560966e21849c01886b9b26db3aa987b4b7606e69",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/Managed/KoreanImageSubtitles.dll",
+      "bytes": 20480,
+      "sha256": "810de4c8bd42f762c561f4e87d9b905bce91138ced478496225d5a06acbf13a6",
+      "new_file": true
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/resources.assets",
+      "bytes": 29698280,
+      "sha256": "7a79f7a8bd271c2f1aff11aefac9eaa40b8a54845a873086608e094ae76bbc2c",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets10.assets",
+      "bytes": 123288,
+      "sha256": "3a6d167151656f8e21a68d159b7a36c5242cb3c5e5bc02a66d5dd28407d94b0c",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets11.assets",
+      "bytes": 119096,
+      "sha256": "86025ad3c84126547dc74260ac5cc42295d72375de9e8fbf5dc1d59a50381965",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets12.assets",
+      "bytes": 635672,
+      "sha256": "fabc870ccab48df8617677ff32ce8c23a36e1be3cb879e9cd5dc2cfccf7277ca",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets13.assets",
+      "bytes": 598304,
+      "sha256": "efd937a0e23ccd32c356362e9b2d5bd7255f855222007b7ac8bade35e47ed383",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets14.assets",
+      "bytes": 199368,
+      "sha256": "04e0a9d4136c96a0c3f9c39a7d3da6f92bec6d1530449bbced75ccd296bd6437",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets2.assets",
+      "bytes": 13648,
+      "sha256": "a6c21ebcee5a1d54dcaa49b78a18d859bc359e8a6fbe0d96fdf9b7a6b64b8ca6",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets3.assets",
+      "bytes": 333256,
+      "sha256": "36e5cf88bad9c672c01001e94b1a95ee90921862870c85409505750b9c205476",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets5.assets",
+      "bytes": 486232,
+      "sha256": "877e900686efaccacc57e1eddb242eaf37893438ee06b0f3e065ef2e64b6982a",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets6.assets",
+      "bytes": 139632,
+      "sha256": "d106a89b76af5e7046fa446941f2dd7edfac4a416d01d3a83bab849cb0f03e3e",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets7.assets",
+      "bytes": 890440,
+      "sha256": "2a46445a9a1bf4b80e2bc268044556d3304822200d3864a8ba1233ed3661abac",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets8.assets",
+      "bytes": 585640,
+      "sha256": "d9a41813fa4cf1c7153f7461c889b07f790c73b1aabe2c8ea053ac89ae9b2db6",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/sharedassets9.assets",
+      "bytes": 247648,
+      "sha256": "b6975235e992bf9ce7335ada9fc5efb3666b001ccdf75a002d99daaa6104ad88",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/StreamingAssets/aa/catalog.json",
+      "bytes": 136632,
+      "sha256": "bccebfea98dd622ed03d3d61bf366b0cb14e0939f1ea1797cc0f050d443edae4",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/StreamingAssets/aa/StandaloneWindows64/localization-assets-english(en)_assets_all.bundle",
+      "bytes": 17932785,
+      "sha256": "7e2ba6d30556ee7bdeeedfcaad6ee46d2fcfd3a815aaba4d95566187b79b5e47",
+      "new_file": false
+    },
+    {
+      "path": "The Dream Of A Cockspur_Data/StreamingAssets/aa/StandaloneWindows64/localization-string-tables-english(en)_assets_all.bundle",
+      "bytes": 28259,
+      "sha256": "6d06bdefdd6d5b137c57fcdf47b49ce2fee797c17dbc3847ec2e363d95d2701c",
+      "new_file": false
+    }
+  ],
+  "payload_bytes": 58525099,
+  "game_executable_included": false,
+  "original_backups_included": false,
+  "game_save_files_included": false
+}
