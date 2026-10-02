@@ -1,4 +1,4 @@
-# The Dream Of A Cockspur 한국어 패치
+# The Dream of a Cockspur 한국어 패치 / 한글패치
 
 게임 설정에서 **English**를 선택하면 한국어로 표시됩니다. 서초바탕 글꼴을 사용합니다.
 
