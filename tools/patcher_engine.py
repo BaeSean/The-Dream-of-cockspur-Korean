@@ -147,3 +147,53 @@ class Patcher:
         if self.verify() != 'original':
             raise ValueError('복원 후 검증에 실패했습니다.')
         return '원본으로 복원했습니다. 백업은 보관되며 세이브는 변경하지 않았습니다.'
+
+    def export_copy(self, output):
+        """Create local copy/paste files and verified original backups; never install."""
+        output = Path(output).resolve()
+        try:
+            output.relative_to(self.game)
+        except ValueError:
+            pass
+        else:
+            raise ValueError('게임 폴더 밖의 저장 위치를 선택하십시오.')
+        if output.exists():
+            raise ValueError('복사용 폴더가 이미 있습니다. 기존 파일을 보존하려면 다른 저장 위치를 선택하십시오.')
+        if self.verify() != 'original':
+            raise ValueError('원본 상태에서만 복사용 파일을 만들 수 있습니다. 기존 패치를 먼저 복원하십시오.')
+        # Stage beside the destination so the final rename exposes only a complete package.
+        output.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix='.cockspur-copy-', dir=str(output.parent)) as temporary:
+            stage = Path(temporary) / 'package'
+            stage.mkdir()
+            for i, row in enumerate(self.rows):
+                self.progress('복사용 파일 준비 중 (%d/%d)' % (i+1, len(self.rows)))
+                payload = contained(self.package, row['payload']).read_bytes()
+                original = b'' if row.get('new_file') else self.target(row).read_bytes()
+                result = payload if row.get('new_file') else patch(original, payload)
+                if sha(result) != row['patched_sha256']:
+                    raise ValueError('복사용 파일 검증에 실패했습니다: ' + row['path'])
+                target = contained(stage / 'files', row['path'])
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(result)
+                if self.digest(target) != row['patched_sha256']:
+                    raise ValueError('저장된 복사용 파일 검증에 실패했습니다.')
+                if not row.get('new_file'):
+                    if sha(original) != row['original_sha256']:
+                        raise ValueError('작업 중 원본 파일이 변경되었습니다.')
+                    backup = contained(stage / 'original-files', row['path'])
+                    backup.parent.mkdir(parents=True, exist_ok=True)
+                    backup.write_bytes(original)
+                    if self.digest(backup) != row['original_sha256']:
+                        raise ValueError('저장된 원본 백업 검증에 실패했습니다.')
+            (stage / 'manifest.json').write_text(json.dumps(self.rows, indent=2), encoding='utf-8')
+            additions = [r['path'] for r in self.rows if r.get('new_file')]
+            (stage / 'added-files.txt').write_text('\n'.join(additions) + '\n', encoding='utf-8')
+            instructions = ('복사 설치: files 안의 The Dream Of A Cockspur_Data 폴더만 게임 실행 파일이 있는 폴더에 붙여넣으십시오.\n'
+                            '게임 폴더는 아직 변경하지 않았습니다. 설치 후 게임 언어를 English로 선택하십시오.\n'
+                            '복원: original-files 안의 같은 폴더를 게임 폴더에 덮어쓴 뒤 added-files.txt의 추가 파일 8개를 삭제하십시오.\n'
+                            '수동 설치는 패처의 원본으로 복원 버튼으로 복원할 수 없습니다. 상태 확인 버튼은 사용할 수 있습니다.\n'
+                            '이 폴더는 사용자의 원본 게임 파일을 포함하는 로컬 백업입니다. 공개 업로드하거나 공유하지 마십시오.\n')
+            (stage / '복사설치안내.txt').write_text(instructions, encoding='utf-8-sig')
+            stage.rename(output)
+        return '복사용 파일과 원본 백업을 만들었습니다. 게임 폴더는 변경하지 않았습니다.\n' + str(output)

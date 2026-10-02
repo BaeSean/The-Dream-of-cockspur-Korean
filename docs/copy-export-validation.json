@@ -1,0 +1,10 @@
+{
+  "executable_export": "passed",
+  "game_unchanged": true,
+  "files": 33,
+  "manual_install_hashes_passed": 33,
+  "original_backup_hashes_passed": 25,
+  "restored_originals": 25,
+  "removed_additions": 8,
+  "automatic_restore_state_created": false
+}

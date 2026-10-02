@@ -77,6 +77,36 @@ class EngineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.engine.restore()
 
+    def test_export_preserves_game_and_provides_backup(self):
+        output = self.root / 'copy-files'
+        self.engine.export_copy(output)
+        self.assertEqual(self.engine.verify(), 'original')
+        self.assertFalse(self.engine.backup.exists())
+        self.assertEqual((output / 'files/data.bin').read_bytes(), self.patched)
+        self.assertEqual((output / 'files/added.dat').read_bytes(), self.extra)
+        self.assertEqual((output / 'original-files/data.bin').read_bytes(), self.original)
+        self.assertEqual((output / 'added-files.txt').read_text().strip(), 'added.dat')
+
+    def test_export_does_not_overwrite_existing_folder(self):
+        output = self.root / 'copy-files'
+        output.mkdir()
+        (output / 'user.txt').write_text('preserve')
+        with self.assertRaises(ValueError):
+            self.engine.export_copy(output)
+        self.assertEqual((output / 'user.txt').read_text(), 'preserve')
+
+    def test_export_rejects_game_folder_destination(self):
+        with self.assertRaises(ValueError):
+            self.engine.export_copy(self.game / 'copy-files')
+        self.assertFalse((self.game / 'copy-files').exists())
+
+    def test_export_rejects_corrupt_payload_without_partial_output(self):
+        (self.package / 'change.bsdiff').write_bytes(b'corrupt')
+        output = self.root / 'copy-files'
+        with self.assertRaises(ValueError):
+            self.engine.export_copy(output)
+        self.assertFalse(output.exists())
+
 
 if __name__ == '__main__':
     unittest.main()

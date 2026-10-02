@@ -19,4 +19,4 @@ jobs:
           $process = Start-Process -FilePath '.\CockspurKoreanPatcher.exe' -ArgumentList @('--smoke-ui', $report) -Wait -PassThru
           if ($process.ExitCode -ne 0) { throw 'Desktop app initialization failed' }
           $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
-          if (-not $result.tk_initialized -or $result.controls -ne 4) { throw 'Unexpected desktop app report' }
+          if (-not $result.tk_initialized -or $result.controls -ne 5) { throw 'Unexpected desktop app report' }

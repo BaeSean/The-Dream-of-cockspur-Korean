@@ -15,6 +15,44 @@
 
 이전에 다른 방식으로 설치한 패치가 있다면 해당 방식으로 먼저 복원하십시오. 새 프로그램은 원본 해시가 맞는 파일만 설치하며 기존 수동 설치의 백업을 임의로 대신하지 않습니다. 게임 업데이트로 지원 파일이 바뀌었으면 설치를 중단합니다.
 
+## 복사·붙여넣기로 설치하기
+
+이 방법도 **명령어 입력이나 Python 설치가 필요 없습니다.** 게임이 원본 상태일 때 진행합니다.
+
+1. [패치 ZIP](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/archive/refs/heads/main.zip)을 받고 압축을 푼 뒤 **`CockspurKoreanPatcher.exe`**를 실행합니다. **게임 폴더 선택**으로 `The Dream Of A Cockspur.exe`가 있는 폴더를 고릅니다.
+2. **복사용 파일 만들기**를 누르고 **게임 폴더 밖의 저장 위치**를 고릅니다. 그곳에 `Cockspur-copy-files`가 생성됩니다. 원본 25개는 `original-files`에 자동 백업되며, 이 단계에서는 게임 파일이 바뀌지 않습니다.
+3. `Cockspur-copy-files\files` 안의 **`The Dream Of A Cockspur_Data` 폴더 하나만** 게임 실행 파일이 있는 폴더에 복사·붙여넣고, 같은 이름의 파일을 덮어씁니다. 게임 위치는 **스팀 라이브러리 → 게임 오른쪽 클릭 → 관리 → 로컬 파일 보기**로 찾습니다.
+4. 패처의 **상태 확인**을 눌러 정상 설치를 확인하고, 게임 언어를 **English**로 선택합니다.
+
+ZIP 전체나 `Cockspur-copy-files` 전체를 게임 폴더에 넣지 마십시오. **`files` 안의 게임 데이터 폴더만** 복사합니다. `original-files` 백업은 게임 폴더 밖에 보관하십시오. 생성된 복사용 폴더에는 원본 게임 파일이 있으므로 공개 업로드하거나 공유하지 마십시오.
+
+### 복사 설치를 원래대로 되돌리기
+
+1. 게임을 종료합니다.
+2. `Cockspur-copy-files\original-files` 안의 **`The Dream Of A Cockspur_Data` 폴더**를 게임 실행 파일이 있는 폴더에 붙여넣고 덮어씁니다.
+3. 게임 폴더에서 아래 **추가 파일 8개만 삭제**합니다. 같은 목록이 `Cockspur-copy-files\added-files.txt`에도 있습니다.
+4. 패처의 **상태 확인**으로 원본 상태인지 확인합니다.
+
+<details>
+<summary>복원할 때 삭제할 추가 파일 8개</summary>
+
+아래 경로는 게임 실행 파일이 있는 폴더 기준입니다. 원본 백업은 삭제하지 마십시오.
+
+```text
+The Dream Of A Cockspur_Data\Managed\KoreanImageSubtitles.dll
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_6.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_8.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_2.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_3.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_4.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_8.ko.png
+The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\secretPathUI_3.ko.png
+```
+
+</details>
+
+**수동 복사 설치는 패처의 ‘원본으로 복원’ 버튼이나 PowerShell Restore 명령으로 복원하지 않습니다.** 위의 별도 원본 백업과 추가 파일 목록을 사용하십시오. 상태 확인 버튼은 두 설치 방식에서 모두 사용할 수 있습니다.
+
 ## 번역 범위
 
 | 구분 | 검증 항목 |
@@ -31,7 +69,10 @@
 
 2026-10-02 현재 번역 파일을 기존 검사기로 다시 검사한 결과 오류 0개, 경고 0개입니다. 이 검사는 전체 플레이·엔딩 재검증을 의미하지 않습니다. 장면 지역명 98곳은 기존 빌드 보고서의 수치를 확인하며, 번역 항목 1,918개가 모두 독립적인 신규 실기 테스트를 뜻하지 않습니다.
 
-## 고급 대안: Python으로 재구성
+<details>
+<summary>고급 대안: Python·PowerShell 명령으로 직접 관리하기</summary>
+
+## Python으로 재구성
 
 이하 절차는 실행 프로그램 대신 재구성 파일을 직접 관리하려는 경우에만 사용합니다. Windows PowerShell과 Python 3.8 이상이 필요합니다. Python 외 추가 패키지를 설치하지 않아도 됩니다. GitHub Releases 배포는 이번 작업에 포함하지 않습니다.
 
@@ -43,7 +84,7 @@
 python tools/prepare.py --game-dir "D:\Games\TheDreamOfACockspur"
 ```
 
-이 단계는 게임 파일을 읽고 차분을 적용하여 `.local-package`에 설치 파일을 재구성합니다. 게임 설치 폴더는 변경하지 않습니다. 33개 결과 파일의 SHA-256이 기존 검수 패치와 모두 같아야 완료됩니다.
+이 Python 대안은 `.local-package\files`에 설치 파일을 만듭니다. GUI의 복사용 결과 경로는 위의 `Cockspur-copy-files\files`입니다. 게임 파일을 읽고 차분을 적용하여 로컬 파일을 재구성합니다. 게임 설치 폴더는 변경하지 않습니다. 33개 결과 파일의 SHA-256이 기존 검수 패치와 모두 같아야 완료됩니다.
 
 ## 고급 대안: PowerShell 설치·확인·복원
 
@@ -63,32 +104,7 @@ python tools/prepare.py --game-dir "D:\Games\TheDreamOfACockspur"
 
 `.local-package` 안의 백업과 `install-state.json`은 복원에 필요하므로 삭제하거나 다른 컴퓨터에 공유하지 마십시오. 재구성된 폴더에는 전체 게임 자산이 있으므로 GitHub에도 올리지 마십시오. 스크립트 실행이 시스템 정책으로 차단되면 조직 정책을 우회하지 말고 허용된 실행 환경에서 진행하십시오.
 
-## 복사·붙여넣기로 수동 설치하는 방법
-
-위의 `python tools/prepare.py ...` 재구성 단계까지는 동일합니다. 공개 저장소에는 차분만 있으므로 내려받은 `patches` 폴더를 게임에 직접 붙여넣어서는 적용되지 않습니다.
-
-1. 게임을 종료하고 원본 상태에서 준비하십시오. 게임 폴더의 `The Dream Of A Cockspur_Data` 폴더 전체를 **게임 폴더 밖의 별도 백업 위치**로 복사하십시오. 이 백업에는 교체되는 원본 25개 파일이 모두 들어 있어야 합니다. 정확한 목록은 `manifest.json`에서 `original_sha256`이 있는 항목입니다. 이미 패치된 상태의 파일을 원본 백업으로 사용하지 마십시오.
-2. 재구성 결과인 `.local-package\files`를 여십시오. 그 안의 **`The Dream Of A Cockspur_Data` 폴더 하나만** 게임 실행 파일 `The Dream Of A Cockspur.exe`가 있는 게임 루트에 복사하고 기존 폴더와 합친 뒤 같은 이름의 파일을 덮어쓰십시오. `.local-package` 자체나 `Apply-Patch.ps1`, `manifest.json`, 백업·상태 파일은 게임 폴더에 복사하지 마십시오.
-3. 아래 확인 명령으로 33개 파일이 모두 `Korean patch installed`인지 확인한 뒤 게임 언어에서 **English**를 선택하십시오.
-
-```powershell
-& .\.local-package\Apply-Patch.ps1 -Mode Verify -GameRoot "D:\Games\TheDreamOfACockspur"
-```
-
-수동 설치는 설치기의 `install-state.json`을 만들지 않습니다. 따라서 **설치기의 Restore 명령으로 수동 설치를 복원할 수 없습니다.** 복원하려면 게임을 종료하고 위에서 보관한 원본 `The Dream Of A Cockspur_Data` 폴더를 게임 루트로 복사하여 덮어쓴 다음, 수동 패치가 추가한 아래 8개 파일을 삭제하십시오. 삭제 전 경로와 파일명이 일치하는지 확인하십시오. 아래 경로는 모두 게임 루트 기준입니다.
-
-```text
-The Dream Of A Cockspur_Data\Managed\KoreanImageSubtitles.dll
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_6.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\bookPage_8.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_2.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_3.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_4.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\Books_8.ko.png
-The Dream Of A Cockspur_Data\Managed\KoreanImageAssets\secretPathUI_3.ko.png
-```
-
-같은 Verify 명령을 다시 실행하여 모든 항목이 `Original - compatible`인지 확인하십시오. 별도 원본 백업을 준비하지 않았다면 수동 설치를 진행하지 마십시오.
+</details>
 
 ## 저장소 구성
 

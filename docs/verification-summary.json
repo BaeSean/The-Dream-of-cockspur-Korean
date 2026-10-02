@@ -12,7 +12,7 @@
   "installer_roundtrip": "Install, Verify, Restore, Verify passed on isolated original-file fixture",
   "restored_original_files": 25,
   "removed_added_files": 8,
-  "unit_tests_passed": 12,
+  "unit_tests_passed": 16,
   "package_payload_validation": "33/33 passed",
   "secret_pattern_scan_findings": [],
   "game_installation_modified": false,
@@ -22,5 +22,6 @@
   "manual_copy_install_restore": "33/33 installed hashes passed; 25 originals backed up and restored; 8 additions removed in isolated fixture",
   "default_installation": "Desktop app: choose game folder, install or restore",
   "desktop_executable_roundtrip": "33 files installed, verified, restored on isolated fixture",
-  "ui_verification": "Packaged Tk initialization and 4 controls passed in normal execution environment; no visual inspection"
+  "ui_verification": "Packaged Tk initialization and 5 controls passed; visual screenshot tools unavailable",
+  "gui_copy_export": "Packaged app creates 33 patched files and 25 verified backups without changing the game; manual install/restore passed"
 }
