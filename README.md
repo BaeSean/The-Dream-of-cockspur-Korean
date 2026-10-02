@@ -4,12 +4,12 @@
 
 ## 빠른 설치
 
-1. [패치 ZIP 받기](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/archive/refs/heads/main.zip)를 누르고, 받은 `The-Dream-of-cockspur-Korean-main.zip`을 원하는 폴더에 전부 압축 해제합니다.
+1. [패치 ZIP 받기](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/raw/refs/heads/main/downloads/Cockspur-Korean-QuickInstall.zip)를 누르고, 받은 `Cockspur-Korean-QuickInstall.zip`을 원하는 폴더에 전부 압축 해제합니다.
 2. 게임을 종료하고, 압축 푼 폴더의 **`CockspurKoreanPatcher.exe`**를 실행합니다.
 3. **게임 폴더 선택 → 한국어 패치 설치**를 누릅니다. 게임 폴더는 **스팀 라이브러리에서 게임 오른쪽 클릭 → 관리 → 로컬 파일 보기**로 찾을 수 있습니다. `The Dream Of A Cockspur.exe`가 있는 폴더를 선택하면 됩니다.
 4. 설치 완료 후 게임을 실행하고 언어를 **English**로 선택합니다.
 
-**Python 설치나 명령어 입력이 필요 없습니다.** Windows 64비트용입니다. 위 링크는 실행 프로그램과 패치 자료가 함께 들어 있는 저장소 ZIP이며, 별도 Releases 다운로드가 아닙니다. 실행 프로그램만 따로 옮기지 말고 압축 푼 폴더의 파일들을 함께 보관하십시오.
+**Python 설치나 명령어 입력이 필요 없습니다.** Windows 64비트용입니다. 위 링크는 실행 프로그램과 패치 자료가 함께 들어 있는 빠른 설치 전용 ZIP이며, 별도 Releases 다운로드가 아닙니다. 실행 프로그램만 따로 옮기지 말고 압축 푼 폴더의 파일들을 함께 보관하십시오.
 
 원본은 게임 폴더의 `_cockspur_ko_backup`에 자동 백업합니다. 원래 상태로 되돌리려면 같은 프로그램에서 같은 게임 폴더를 선택하고 **원본으로 복원**을 누르십시오. **상태 확인** 버튼으로 설치 상태도 확인할 수 있습니다. 백업 폴더는 복원이 필요할 동안 보관하십시오. 세이브 파일은 수정하지 않습니다.
 
@@ -19,7 +19,7 @@
 
 이 방법도 **명령어 입력이나 Python 설치가 필요 없습니다.** 게임이 원본 상태일 때 진행합니다.
 
-1. [패치 ZIP](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/archive/refs/heads/main.zip)을 받고 압축을 푼 뒤 **`CockspurKoreanPatcher.exe`**를 실행합니다. **게임 폴더 선택**으로 `The Dream Of A Cockspur.exe`가 있는 폴더를 고릅니다.
+1. **최초 1회 원본 게임 기반으로 복사용 파일을 생성해야 합니다.** [복사용 ZIP](https://github.com/BaeSean/The-Dream-of-cockspur-Korean/raw/refs/heads/main/downloads/Cockspur-Korean-CopyPaste.zip)을 받고 압축을 푼 뒤 **`CockspurCopyFiles.exe`**를 실행합니다. **게임 폴더 선택**으로 `The Dream Of A Cockspur.exe`가 있는 폴더를 고릅니다.
 2. **복사용 파일 만들기**를 누르고 **게임 폴더 밖의 저장 위치**를 고릅니다. 그곳에 `Cockspur-copy-files`가 생성됩니다. 원본 25개는 `original-files`에 자동 백업되며, 이 단계에서는 게임 파일이 바뀌지 않습니다.
 3. `Cockspur-copy-files\files` 안의 **`The Dream Of A Cockspur_Data` 폴더 하나만** 게임 실행 파일이 있는 폴더에 복사·붙여넣고, 같은 이름의 파일을 덮어씁니다. 게임 위치는 **스팀 라이브러리 → 게임 오른쪽 클릭 → 관리 → 로컬 파일 보기**로 찾습니다.
 4. 패처의 **상태 확인**을 눌러 정상 설치를 확인하고, 게임 언어를 **English**로 선택합니다.

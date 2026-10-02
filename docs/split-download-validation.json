@@ -1,0 +1,26 @@
+{
+  "zip_hashes": {
+    "Cockspur-Korean-QuickInstall.zip": {
+      "sha256": "ee8623e368dc8c4f03cb4b09bb507d9e6417243dfc667fe3ddc7710a4fed5f42",
+      "bytes": 18278583,
+      "entry_point": "CockspurKoreanPatcher.exe"
+    },
+    "Cockspur-Korean-CopyPaste.zip": {
+      "sha256": "a274010c77c2fc2e83538607dac7ee9c306a8641c6be891ae92588e8684b9da6",
+      "bytes": 18278821,
+      "entry_point": "CockspurCopyFiles.exe"
+    }
+  },
+  "quick_install_restore": {
+    "executable_roundtrip": "passed",
+    "files": 33
+  },
+  "copy_export": {
+    "executable_export": "passed",
+    "game_unchanged": true,
+    "files": 33
+  },
+  "dedicated_ui_initialization": true,
+  "visual_inspection": false,
+  "tests_passed": 16
+}

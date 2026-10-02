@@ -13,6 +13,7 @@ PACKAGE = Path(sys.executable).resolve().parent if getattr(sys, 'frozen', False)
 
 
 def main():
+    copy_mode = Path(sys.executable).stem == 'CockspurCopyFiles'
     if len(sys.argv) == 5 and sys.argv[1] == '--test-export':
         engine = Patcher(PACKAGE, Path(sys.argv[2]))
         assert engine.verify() == 'original'
@@ -90,7 +91,11 @@ def main():
                 events.put(('error', str(error)))
         threading.Thread(target=worker, daemon=False).start()
 
-    for index, (label, action) in enumerate([('한국어 패치 설치', 'install'), ('원본으로 복원', 'restore'), ('복사용 파일 만들기', 'export_copy'), ('상태 확인', 'verify')]):
+    actions = [('복사용 파일 만들기', 'export_copy'), ('상태 확인', 'verify')] if copy_mode else [('한국어 패치 설치', 'install'), ('원본으로 복원', 'restore'), ('복사용 파일 만들기', 'export_copy'), ('상태 확인', 'verify')]
+    if copy_mode:
+        app.title('Cockspur — 복사용 파일 만들기 (원본 게임 필요)')
+        state.set('원본 게임 폴더를 선택하고 복사용 파일 만들기를 누르십시오.')
+    for index, (label, action) in enumerate(actions):
         button = ttk.Button(buttons, text=label, command=lambda action=action: run(action))
         button.grid(row=index // 2, column=index % 2, sticky='ew', padx=(0, 8), pady=(0, 8))
         controls.append(button)

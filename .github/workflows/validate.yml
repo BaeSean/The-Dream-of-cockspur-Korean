@@ -12,6 +12,8 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - run: python tools/verify_package.py
+      - run: python tools/build_downloads.py
+      - run: python tools/verify_downloads.py
       - name: Check packaged desktop app initialization
         shell: pwsh
         run: |
@@ -20,3 +22,29 @@ jobs:
           if ($process.ExitCode -ne 0) { throw 'Desktop app initialization failed' }
           $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
           if (-not $result.tk_initialized -or $result.controls -ne 5) { throw 'Unexpected desktop app report' }
+  publish-downloads:
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/build_downloads.py
+      - run: python tools/verify_downloads.py
+      - name: Store verified download ZIPs
+        shell: pwsh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 1) {
+            git commit -m 'Build separate quick-install and copy-paste downloads'
+            if ($LASTEXITCODE -ne 0) { throw 'Download commit failed' }
+            git push origin HEAD:main
+            if ($LASTEXITCODE -ne 0) { throw 'Download push failed' }
+          }

@@ -1,7 +1,7 @@
 {
   "file": "CockspurKoreanPatcher.exe",
-  "sha256": "bf5d54b8b110777fda8b64f91072267c945455aede5f741d98341d432e6ff7c8",
-  "bytes": 8984107,
+  "sha256": "d148ffc4eac4ca4730f5601bc74ff0c79c8e23624644ba60cb143cc2ae14785e",
+  "bytes": 8984827,
   "python": "3.8.9",
   "pyinstaller": "6.22.3",
   "platform": "Windows x64",
